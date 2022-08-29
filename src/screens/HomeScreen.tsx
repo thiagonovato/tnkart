@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
+import SearchField from '../components/SearchField';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -16,6 +17,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView>
       <Header />
+      <SearchField />
     </SafeAreaView>
   );
 }
