@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "TNKart",
+    "slug": "TNKart",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
