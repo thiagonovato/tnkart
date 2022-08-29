@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
 import SearchField from '../components/SearchField';
+import MainScroll from '../components/MainScroll';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -18,6 +19,7 @@ export default function HomeScreen() {
     <SafeAreaView>
       <Header />
       <SearchField />
+      <MainScroll />
     </SafeAreaView>
   );
 }
