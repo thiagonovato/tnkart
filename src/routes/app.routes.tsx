@@ -7,16 +7,9 @@ import {
   ShoppingCartSimple,
   SquaresFour,
 } from 'phosphor-react-native';
+import HomeScreen from '../screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
 
 function SettingsScreen() {
   return (
@@ -32,6 +25,10 @@ export function AppRoutes() {
         tabBarStyle: {
           paddingVertical: Platform.OS === 'ios' ? 20 : 5,
           paddingBottom: 5,
+          borderTopLeftRadius: 15,
+          borderTopRightRadius: 15,
+          position: 'absolute',
+          bottom: 0,
         },
       }}
     >
