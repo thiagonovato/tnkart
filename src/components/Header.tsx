@@ -4,7 +4,7 @@ import { Bell, Heart, List } from 'phosphor-react-native';
 
 export default function Header() {
   return (
-    <View className='flex flex-row justify-between px-3 h-12 items-center'>
+    <View className='flex flex-row justify-between px-3 h-16 items-center'>
       <View className='flex-row '>
         <TouchableOpacity>
           <View className='p-1'>

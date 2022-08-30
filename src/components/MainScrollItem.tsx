@@ -18,10 +18,7 @@ export default function MainScrollItem({
         className='w-20 h-20 justify-center items-center rounded-lg'
         style={{ backgroundColor: color }}
       >
-        <Image
-          source={{ uri: icon }}
-          className='h-7 w-7 bg-gray-300 p-4 rounded-full'
-        ></Image>
+        <Image source={icon} className='h-7 w-7  p-4'></Image>
       </View>
       <Text className='pt-2'>{title}</Text>
     </View>
