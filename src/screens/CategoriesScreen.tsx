@@ -10,6 +10,7 @@ import HealthCare from '../assets/healthcare.png';
 import Maternity from '../assets/maternity.png';
 import SuggarBloodLevel from '../assets/sugar-blood-level.png';
 import Fitness from '../assets/fitness.png';
+import GoBack from '../components/GoBack';
 export default function CategoriesScreen() {
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -52,6 +53,7 @@ export default function CategoriesScreen() {
     <View className='bg-white h-screen'>
       <SafeAreaView>
         <Header />
+        <GoBack title='Categories' />
         <SearchField />
         <ScrollView
           className='bg-white'

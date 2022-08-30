@@ -1,7 +1,7 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 import { Bell, Heart, List } from 'phosphor-react-native';
-
+import Logo from '../assets/logo.png';
 export default function Header() {
   return (
     <View className='flex flex-row justify-between px-3 h-16 items-center bg-white'>
@@ -12,7 +12,7 @@ export default function Header() {
           </View>
         </TouchableOpacity>
         <View className='justify-center'>
-          <Text className='italic font-bold text-2xl'>PlusPlus</Text>
+          <Image source={Logo} className='h-10 w-36' />
         </View>
       </View>
 

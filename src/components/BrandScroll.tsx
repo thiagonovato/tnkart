@@ -1,18 +1,21 @@
 import { View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import BrandScrollItem, { IBrandItemsProps } from './BrandScrollItem';
+import { useNavigation } from '@react-navigation/native';
 
 interface IProps {
   title: string;
   items: Array<IBrandItemsProps>;
 }
 export default function BrandScroll({ title, items }: IProps) {
+  const navigation = useNavigation();
+
   return (
     <View className='px-3 pb-2 bg-white mt-3'>
       {title && (
         <View className='flex flex-row justify-between items-center py-2'>
           <Text className='font-bold'>{title}</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Brands')}>
             <Text className='text-gray-400'>{'View More >'}</Text>
           </TouchableOpacity>
         </View>
