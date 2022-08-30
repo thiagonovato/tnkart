@@ -8,7 +8,7 @@ interface IProps {
 }
 export default function BrandScroll({ title, items }: IProps) {
   return (
-    <View className='px-3 pb-2 bg-white mt-4'>
+    <View className='px-3 pb-2 bg-white mt-3'>
       {title && (
         <View className='flex flex-row justify-between items-center py-2'>
           <Text className='font-bold'>{title}</Text>

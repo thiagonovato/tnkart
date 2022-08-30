@@ -8,6 +8,7 @@ import MainScroll from '../components/MainScroll';
 import CarouselComponent from '../components/Carousel';
 import SecondScroll from '../components/SecondScroll';
 import BrandScroll from '../components/BrandScroll';
+import RectangleComponent from '../components/Rectangle';
 
 /**
  *
@@ -26,6 +27,8 @@ import Pngwing from '../assets/pngwing.png';
 import BrandHealth from '../assets/brandhealth.png';
 import Bars from '../assets/bars.png';
 import BrandConverse from '../assets/brandconverse.png';
+import Rectangle from '../assets/rectangle.png';
+import Rectangle2 from '../assets/rectangle2.png';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -133,6 +136,8 @@ export default function HomeScreen() {
         <CarouselComponent />
         <SecondScroll title='Featured Categories' items={itemsCategories} />
         <BrandScroll title='Brands' items={itemsBrand} />
+        <RectangleComponent img={Rectangle} />
+        <RectangleComponent img={Rectangle2} />
       </ScrollView>
     </SafeAreaView>
   );
