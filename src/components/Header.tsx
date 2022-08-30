@@ -12,17 +12,17 @@ export default function Header() {
           </View>
         </TouchableOpacity>
         <View className='justify-center'>
-          <Text className='italic font-bold text-lg'>TNKart</Text>
+          <Text className='italic font-bold text-2xl'>TNKart</Text>
         </View>
       </View>
 
       <View className='flex-row'>
-        <View className='p-1 bg-blue-200 rounded-full mr-1'>
+        <View className='p-1 bg-emerald-50 rounded-full mr-1'>
           <TouchableOpacity>
             <Heart size={20} weight='thin' />
           </TouchableOpacity>
         </View>
-        <View className='p-1 bg-blue-200 rounded-full mr-1'>
+        <View className='p-1 bg-emerald-50 rounded-full mr-1'>
           <TouchableOpacity>
             <Bell size={20} weight='thin' />
           </TouchableOpacity>

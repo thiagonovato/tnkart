@@ -1,15 +1,14 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
-import SecondScrollItem, { ISecondScrollItem } from './SecondScrollItem';
+import BrandScrollItem, { IBrandItemsProps } from './BrandScrollItem';
 
 interface IProps {
   title: string;
-  items: Array<ISecondScrollItem>;
+  items: Array<IBrandItemsProps>;
 }
-
-export default function SecondScroll({ title, items }: IProps) {
+export default function BrandScroll({ title, items }: IProps) {
   return (
-    <View className='px-3 pb-2 bg-white'>
+    <View className='px-3 pb-2 bg-white mt-4'>
       {title && (
         <View className='flex flex-row justify-between items-center py-2'>
           <Text className='font-bold'>{title}</Text>
@@ -21,12 +20,11 @@ export default function SecondScroll({ title, items }: IProps) {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {items.map((item) => {
           return (
-            <SecondScrollItem
+            <BrandScrollItem
               key={item.id}
               title={item.title}
               icon={item.icon}
               color={item.color}
-              fontColor={item.fontColor}
             />
           );
         })}

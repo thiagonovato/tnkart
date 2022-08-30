@@ -1,13 +1,13 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import React, { useLayoutEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
 import SearchField from '../components/SearchField';
 import MainScroll from '../components/MainScroll';
-import Carousel from '../components/Carousel';
 import CarouselComponent from '../components/Carousel';
 import SecondScroll from '../components/SecondScroll';
+import BrandScroll from '../components/BrandScroll';
 
 /**
  *
@@ -22,6 +22,10 @@ import HealthCare from '../assets/healthcare.png';
 import Maternity from '../assets/maternity.png';
 import SuggarBloodLevel from '../assets/sugar-blood-level.png';
 import Fitness from '../assets/fitness.png';
+import Pngwing from '../assets/pngwing.png';
+import BrandHealth from '../assets/brandhealth.png';
+import Bars from '../assets/bars.png';
+import BrandConverse from '../assets/brandconverse.png';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -90,15 +94,46 @@ export default function HomeScreen() {
     },
   ];
 
+  const itemsBrand = [
+    {
+      id: 1,
+      color: '#FFF2F4',
+      icon: Pngwing,
+      title: 'Muscle',
+    },
+    {
+      id: 2,
+      color: '#EAFAFF',
+      icon: BrandHealth,
+      title: 'Health',
+    },
+    {
+      id: 3,
+      color: '#FFF2D0',
+      icon: Bars,
+      title: 'General',
+    },
+    {
+      id: 4,
+      color: '#FFE8E3',
+      icon: BrandConverse,
+      title: 'Converse',
+    },
+  ];
+
   return (
     <SafeAreaView>
-      <View className='bg-gray-200'>
+      <ScrollView
+        className='bg-gray-200'
+        contentContainerStyle={{ paddingBottom: 150 }}
+      >
         <Header />
         <SearchField />
         <MainScroll items={itemsMedicine} />
         <CarouselComponent />
         <SecondScroll title='Featured Categories' items={itemsCategories} />
-      </View>
+        <BrandScroll title='Brands' items={itemsBrand} />
+      </ScrollView>
     </SafeAreaView>
   );
 }
