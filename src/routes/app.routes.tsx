@@ -9,16 +9,11 @@ import {
 } from 'phosphor-react-native';
 import HomeScreen from '../screens/HomeScreen';
 import CategoriesScreen from '../screens/CategoriesScreen';
+import CartScreen from '../screens/CartScreen';
+import PrescriptionScreen from '../screens/PrescriptionScreen';
 
 const Tab = createBottomTabNavigator();
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 export function AppRoutes() {
   return (
     <Tab.Navigator
@@ -51,7 +46,7 @@ export function AppRoutes() {
       />
       <Tab.Screen
         name='Cart'
-        component={SettingsScreen}
+        component={CartScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <ShoppingCartSimple size={size} color={color} />
@@ -60,7 +55,7 @@ export function AppRoutes() {
       />
       <Tab.Screen
         name='Prescription'
-        component={SettingsScreen}
+        component={PrescriptionScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <ListChecks size={size} color={color} />
