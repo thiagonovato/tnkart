@@ -1,4 +1,4 @@
-package com.tnkart.newarchitecture;
+package com.tnovato.plusplus.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.tnkart.BuildConfig;
-import com.tnkart.newarchitecture.components.MainComponentsRegistry;
-import com.tnkart.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.tnovato.plusplus.BuildConfig;
+import com.tnovato.plusplus.newarchitecture.components.MainComponentsRegistry;
+import com.tnovato.plusplus.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

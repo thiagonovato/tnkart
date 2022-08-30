@@ -12,7 +12,7 @@ export default function Header() {
           </View>
         </TouchableOpacity>
         <View className='justify-center'>
-          <Text className='italic font-bold text-2xl'>TNKart</Text>
+          <Text className='italic font-bold text-2xl'>PlusPlus</Text>
         </View>
       </View>
 
