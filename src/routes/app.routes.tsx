@@ -8,6 +8,7 @@ import {
   SquaresFour,
 } from 'phosphor-react-native';
 import HomeScreen from '../screens/HomeScreen';
+import CategoriesScreen from '../screens/CategoriesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -41,7 +42,7 @@ export function AppRoutes() {
       />
       <Tab.Screen
         name='Categories'
-        component={SettingsScreen}
+        component={CategoriesScreen}
         options={{
           tabBarIcon: ({ size, color }) => (
             <SquaresFour size={size} color={color} />

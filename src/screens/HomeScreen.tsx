@@ -125,20 +125,22 @@ export default function HomeScreen() {
   ];
 
   return (
-    <SafeAreaView>
-      <ScrollView
-        className='bg-gray-200'
-        contentContainerStyle={{ paddingBottom: 150 }}
-      >
-        <Header />
-        <SearchField />
-        <MainScroll items={itemsMedicine} />
-        <CarouselComponent />
-        <SecondScroll title='Featured Categories' items={itemsCategories} />
-        <BrandScroll title='Brands' items={itemsBrand} />
-        <RectangleComponent img={Rectangle} />
-        <RectangleComponent img={Rectangle2} />
-      </ScrollView>
-    </SafeAreaView>
+    <View className='bg-white h-screen'>
+      <SafeAreaView>
+        <ScrollView
+          className='bg-gray-200'
+          contentContainerStyle={{ paddingBottom: 150 }}
+        >
+          <Header />
+          <SearchField />
+          <MainScroll items={itemsMedicine} />
+          <CarouselComponent />
+          <SecondScroll title='Featured Categories' items={itemsCategories} />
+          <BrandScroll title='Brands' items={itemsBrand} />
+          <RectangleComponent img={Rectangle} />
+          <RectangleComponent img={Rectangle2} />
+        </ScrollView>
+      </SafeAreaView>
+    </View>
   );
 }

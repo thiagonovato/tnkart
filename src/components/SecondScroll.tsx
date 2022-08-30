@@ -1,6 +1,7 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import React from 'react';
 import SecondScrollItem, { ISecondScrollItem } from './SecondScrollItem';
+import { useNavigation } from '@react-navigation/native';
 
 interface IProps {
   title: string;
@@ -8,13 +9,20 @@ interface IProps {
 }
 
 export default function SecondScroll({ title, items }: IProps) {
+  const navigation = useNavigation();
+
   return (
     <View className='px-3 pb-2 bg-white'>
       {title && (
         <View className='flex flex-row justify-between items-center py-2'>
           <Text className='font-bold'>{title}</Text>
           <TouchableOpacity>
-            <Text className='text-gray-400'>{'View More >'}</Text>
+            <Text
+              className='text-gray-400'
+              onPress={() => navigation.navigate('Categories')}
+            >
+              {'View More >'}
+            </Text>
           </TouchableOpacity>
         </View>
       )}
