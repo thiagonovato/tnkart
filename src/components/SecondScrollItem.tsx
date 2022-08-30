@@ -1,13 +1,20 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
 
-export interface IItem {
+export interface ISecondScrollItem {
   id?: number;
   color: string;
   icon: string;
   title: string;
+  fontColor: string;
 }
-export default function MainScrollItem({ color, icon, title, ...rest }: IItem) {
+export default function SecondScrollItem({
+  color,
+  icon,
+  title,
+  fontColor,
+  ...rest
+}: ISecondScrollItem) {
   return (
     <View className=' items-center pr-3' {...rest}>
       <View
@@ -15,8 +22,10 @@ export default function MainScrollItem({ color, icon, title, ...rest }: IItem) {
         style={{ backgroundColor: color }}
       >
         <Image source={icon} className='h-7 w-7  p-4'></Image>
+        <Text className='pt-2 text-xs' style={{ color: fontColor }}>
+          {title}
+        </Text>
       </View>
-      <Text className='pt-2 text-sm'>{title}</Text>
     </View>
   );
 }
