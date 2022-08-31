@@ -29,6 +29,7 @@ import Bars from '../assets/bars.png';
 import BrandConverse from '../assets/brandconverse.png';
 import Rectangle from '../assets/rectangle.png';
 import Rectangle2 from '../assets/rectangle2.png';
+import Products from '../components/Products';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -138,6 +139,7 @@ export default function HomeScreen() {
           <SecondScroll title='Featured Categories' items={itemsCategories} />
           <BrandScroll title='Brands' items={itemsBrand} />
           <RectangleComponent img={Rectangle} />
+          <Products />
           <RectangleComponent img={Rectangle2} />
         </ScrollView>
       </SafeAreaView>
